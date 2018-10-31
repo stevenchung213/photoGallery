@@ -9,8 +9,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/../client/dist'));
 
-app.get('/api/photos', function(req, res) {
-  Photos.find({}, function(err, data) {
+app.get('/api/photos/:propertyId', function(req, res) {
+  Photos.find({propertyId: req.params.propertyId}, function(err, data) {
     if (err) {
       res.send(500, 'Error retrieving photos');
     } else {
