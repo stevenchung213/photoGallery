@@ -1,10 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import $ from 'jquery';
 
 class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {};
+  constructor(props) {
+    super(props);
+    this.state = {
+      photos: []
+    };
+
+    this.getPhotos = this.getPhotos.bind(this);
+  }
+
+  getPhotos() {
+    $.ajax({
+      method: 'GET',
+      url: '/api/photogalleries',
+      success: (res) => {
+        this.setState({photos: res})
+      },
+      error: (err) => {
+        console.log('Error retrieving photos', err)
+      },
+      complete: () => {
+        console.log('GET request complete');
+      }
+    })
   }
 
   render () {

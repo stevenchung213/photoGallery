@@ -1,17 +1,25 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const PhotoGallery = require('../db/index.js');
-let app = express();
+
+const Photos = require('../db/index.js');
+
+const app = express();
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(__dirname + '/../client.dist'));
+app.use(express.static(__dirname + '/../client/dist'));
 
-// Photos.Photos.create({
-//   _id: 1,
-//   photoURL: 'YE BOI!'
-// }, () => {});
+app.get('/api/photos', function(req, res) {
+  Photos.find({}, function(err, data) {
+    if (err) {
+      res.send(500, 'Error retrieving photos');
+    } else {
+      res.json(data);
+    }
+  });
+});
 
-let port = 3000;
+const port = 3003;
 
 app.listen(port, function() {
   console.log(`listening on port ${port}`);

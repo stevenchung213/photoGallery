@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-const { PhotoGallery } = require('./index.js');
+const Photo = require('./index.js');
 
 var getRandomId = function(min, max) {
   var min = Math.ceil(min);
@@ -22,6 +22,6 @@ var getPhotoData = function(num) {
   return data;
 }
 
-var photoGalleryData = getPhotoData(1045);
+var photoData = getPhotoData(1045);
 
-PhotoGallery.create(photoGalleryData);
+Photo.create(photoData);
