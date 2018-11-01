@@ -11,11 +11,12 @@
     "react-dev": "webpack -d --watch",
     "server-dev": "nodemon --inspect server/index.js",
     "db:setup": "node db/seed.js",
-    "test": "jest photogallery/src/index.test.js"
+    "test": "jest photogallery/src"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
+    "jquery": "^3.3.1",
     "mongoose": "^5.3.6",
     "react": "^16.6.0",
     "react-dom": "^16.6.0"
