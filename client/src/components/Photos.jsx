@@ -17,7 +17,6 @@ class Photos extends React.Component {
     if (propId > 0 && propId <= 100) {
       $.get('/photos/' + propId, result => {
         this.setState({currentPropertyId: propId, photos: result});
-        console.log(this.state.photos);
       })
     } else {
       $.get('/photos', result => {
@@ -27,12 +26,18 @@ class Photos extends React.Component {
   }
 
   render () {
-    return (
-      <div>
-        <h1>Photo Gallery</h1>
-        <h2>This is property {this.state.currentPropertyId}</h2>
-      </div>
-    )
+    if (this.state.photos.length) {
+      return (
+        <div>
+          <h1>Photo Gallery</h1>
+          <div><img src={this.state.photos[0].photoURL}/></div>
+        </div>
+      )
+    } else {
+      return (
+        <div>Loading</div>
+      )
+    }
   }
 }
 
