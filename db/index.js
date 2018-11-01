@@ -14,6 +14,6 @@ const photoSchema = mongoose.Schema({
   photoURL: String
 });
 
-const PhotoGallery = mongoose.model('PhotoGallery', photoSchema);
+const Photo = mongoose.model('Photo', photoSchema);
 
-module.exports.PhotoGallery = PhotoGallery;
+module.exports = Photo;
