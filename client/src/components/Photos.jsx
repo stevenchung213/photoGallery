@@ -1,6 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 import Enlarge from './Enlarge.jsx';
+import '../../dist/styles.css';
 
 class Photos extends React.Component {
   constructor(props) {
@@ -29,8 +30,9 @@ class Photos extends React.Component {
     if (this.state.photos.length) {
       return (
         <div>
-          <h1>Photo Gallery</h1>
-          <div><img src={this.state.photos[0].photoURL}/></div>
+          {this.state.photos.map((photo) => 
+            <div><img src={photo.photoURL}/></div>
+          )}
         </div>
       )
     } else {
