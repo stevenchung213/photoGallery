@@ -1,0 +1,62 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+div .gallery {
+    margin-top: 100px;
+    max-width: 80%;
+    border-top: 0.5px solid lightgray;
+    border-right: 0.5px solid lightgray;
+    height: 500px;
+    display: flex;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.slideshow {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    height: 500px;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.photo { 
+    height: 500px;
+    width: auto;
+    margin: 0 auto;
+}
+
+button {
+    background-color: black;
+    opacity: 0.7;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: black;
+    opacity: 1.0;
+}
+
+.arrow {
+    align-self: center;
+    padding: 15px 20px;
+    border-radius: 50%;
+}
+
+.expand {
+    align-self: flex-end;
+    padding: 10px 15px;
+    border-radius: 50%;
+}
+
+.prevArrow, .expand {
+    display: block;
+}
