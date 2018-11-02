@@ -1,5 +1,5 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 div .gallery {
@@ -51,12 +51,19 @@ button {
     border-radius: 50%;
 }
 
+.nextArrow {
+    margin-right: 15px;
+}
+
 .expand {
-    align-self: flex-end;
+    position: absolute;
+    left: 0;
+    bottom: 0;
     padding: 10px 15px;
-    border-radius: 50%;
+    border-radius: 40%;
 }
 
 .prevArrow, .expand {
     display: block;
+    margin-left: 5px;
 }
