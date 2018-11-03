@@ -43,7 +43,7 @@ class Gallery extends React.Component {
 
   goToPrevPhoto() {
     if (this.state.currentPhoto === 0) {
-      this.setState({currentPhoto: this.state.photos.length - 1})
+      this.setState({currentPhoto: this.state.photos.length - 1});
     } else {
       this.setState({currentPhoto: this.state.currentPhoto - 1});
     }
