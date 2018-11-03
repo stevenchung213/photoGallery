@@ -1,12 +1,11 @@
 import React from 'react';
-import $ from 'jquery';
 
-const ExpandButton = ({ photos, photo }) => {
-  if (photos.length && photo === 0) {
-    console.log(photos);
+const ExpandButton = (props) => {
+  console.log(props.view);
+  if (props.photos.length && props.photo >= 0) {
     return (
       <div className="expand">
-      <button className="expand">{photo + 1}/{photos.length}</button>
+      <button className="expand" onClick={() => props.handleClick()}>{props.photo + 1}/{props.photos.length}</button>
     </div>
     );
   } else {
