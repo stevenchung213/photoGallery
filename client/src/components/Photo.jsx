@@ -5,7 +5,6 @@ const Photo = ({ photos, photo }) => {
     return (
       <div>
         <img className="main-photo" src={photos[photo].photoURL}/>
-        <img className="next-photo" src={photos[photo + 1].photoURL}/>
       </div>
     );
   } else {
