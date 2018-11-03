@@ -10,16 +10,21 @@ body {
 
 button {
     background-color: black;
-    opacity: 0.7;
+    opacity: 0.65;
     color: white;
     border: none;
-    font-size: 20px;
+    font-family: inherit;
+    font-size: 17px;
     text-align: center;
 }
 
-.button:hover {
+button:focus {
+    outline: none;
+}
+
+button:hover {
     background-color: black;
-    opacity: 1.0;
+    opacity: 0.8;
 }
 
 .arrow {
@@ -36,8 +41,8 @@ button {
     position: absolute;
     left: 0;
     bottom: 0;
-    padding: 10px 15px;
-    border-radius: 40%;
+    padding: 13px 13px;
+    border-radius: 50%;
 }
 
 .prevArrow, .expand {
@@ -53,8 +58,8 @@ button {
     height: 500px;
     display: flex;
     position: relative;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
 .gallery-slideshow {
@@ -63,19 +68,29 @@ button {
     margin: 0;
     height: 500px;
     width: 100%;
+    overflow-x: visible;
     overflow-y: hidden;
 }
 
-.main-photo {
+.gallery-slideshow .prev-photo {
     display: block;
-    text-align: center;
     position: relative;
+    float: left;
+    height: 500px;
+    width: auto;
+    margin: auto;
+    opacity: 0.2;
+}
+
+.gallery-slideshow .main-photo {
+    display: block;
+    clear: none;
     height: 500px;
     width: auto;
     margin: auto;
 }
 
-.next-photo { 
+.gallery-slideshow .next-photo { 
     display: block;
     position: relative;
     float: right;
@@ -104,13 +119,34 @@ button {
     overflow-y: hidden;
 }
 
+.expanded-slideshow .prev-photo {
+    display: block;
+    position: relative;
+    float: left;
+    height: 100vh;
+    width: auto;
+    margin: auto;
+    opacity: 0.2;
+}
+
 .expanded-slideshow .main-photo {
     display: block;
     text-align: center;
     position: relative;
+    clear: none;
     height: 100vh;
     width: auto;
     margin: auto;
+}
+
+.expanded-slideshow .next-photo {
+    display: block;
+    position: relative;
+    float: right;
+    height: 100vh;
+    width: auto;
+    margin: auto;
+    opacity: 0.2;
 }
 
 .expanded .expand {
