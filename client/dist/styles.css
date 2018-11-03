@@ -1,5 +1,6 @@
 body {
     font-family: 'Lato', sans-serif;
+    margin: 0;
 }
 
 div .gallery {
@@ -10,7 +11,6 @@ div .gallery {
     height: 500px;
     display: flex;
     position: relative;
-    text-align: center;
     justify-content: center;
     align-items: center;
 }
@@ -18,18 +18,28 @@ div .gallery {
 .slideshow {
     display: block;
     position: relative;
-    margin: 0 auto;
+    margin: 0;
     height: 500px;
     width: 100%;
-    overflow-x: hidden;
     overflow-y: hidden;
-    white-space: nowrap;
 }
 
-.photo { 
+.main-photo {
+    display: block;
+    text-align: center;
+    position: relative;
     height: 500px;
     width: auto;
-    margin: 0 auto;
+    margin: auto;
+}
+
+.next-photo { 
+    display: block;
+    position: relative;
+    float: right;
+    height: 500px;
+    width: auto;
+    opacity: 0.2;
 }
 
 button {
