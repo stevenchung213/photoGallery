@@ -19,7 +19,7 @@ describe('Database should be returning info correctly', () => {
     return Photo.find({_id: 102}).exec()
       .then(data => {
         expect(data[0]._id).toBe(102);
-        expect(data[0].propertyId).toBe(28);
+        expect(data[0].propertyId).toBe(38);
         expect(data[0].photoURL).toBe('https://s3-us-west-2.amazonaws.com/fec1-photo-gallery/P102.jpg');
         expect(typeof data[0].photoURL).toBe('string');
       })

@@ -1,0 +1,151 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    overflow: hidden;
+}
+
+button {
+    display: block;
+    background-color: black;
+    opacity: 0.65;
+    color: white;
+    border: none;
+    font-family: inherit;
+    font-size: 17px;
+    text-align: center;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover {
+    background-color: black;
+    opacity: 0.8;
+}
+
+.arrow {
+    align-self: center;
+    padding: 15px 20px;
+    border-radius: 50%;
+}
+
+.nextArrow {
+    margin-right: 15px;
+}
+
+.prevArrow {
+    margin-left: 15px;
+}
+.expand {
+    position: absolute;
+    margin-left: 6px;
+    margin-bottom: 5px;
+    left: 0;
+    bottom: 0;
+    padding: 13px 13px;
+    border-radius: 50%;
+}
+
+.gallery {
+    margin-top: 135px;
+    max-width: 67%;
+    border-top: 0.5px solid lightgray;
+    border-right: 0.5px solid lightgray;
+    height: 500px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-slideshow {
+    display: block;
+    position: relative;
+    margin: 0;
+    height: 500px;
+    width: 100%;
+    overflow-x: visible;
+    overflow-y: hidden;
+}
+
+.gallery-slideshow .prev-photo {
+    display: block;
+    position: relative;
+    float: left;
+    height: 500px;
+    width: auto;
+    margin: auto;
+    opacity: 0.2;
+}
+
+.gallery-slideshow .main-photo {
+    display: block;
+    clear: none;
+    height: 500px;
+    width: auto;
+    margin: auto;
+}
+
+.gallery-slideshow .next-photo { 
+    display: block;
+    position: relative;
+    float: right;
+    height: 500px;
+    width: auto;
+    opacity: 0.2;
+}
+
+.expanded {
+    height: 100%;
+    width: 100%;
+    overflow-y: hidden;
+    background-color: #273131;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.expanded-slideshow {
+    display: block;
+    position: relative;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow-y: hidden;
+}
+
+.expanded-slideshow .prev-photo {
+    display: block;
+    position: relative;
+    float: left;
+    height: 100vh;
+    width: auto;
+    margin: auto;
+    opacity: 0.2;
+}
+
+.expanded-slideshow .main-photo {
+    display: block;
+    text-align: center;
+    position: relative;
+    clear: none;
+    height: 100vh;
+    width: auto;
+    margin: auto;
+}
+
+.expanded-slideshow .next-photo {
+    display: block;
+    position: relative;
+    float: right;
+    height: 100vh;
+    width: auto;
+    margin: auto;
+    opacity: 0.2;
+}
