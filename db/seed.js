@@ -3,15 +3,15 @@ mongoose.Promise = global.Promise;
 const Photo = require('./index.js');
 
 const getRandomId = function(min, max) {
-  let min = Math.ceil(min);
-  let max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+  let minId = Math.ceil(min);
+  let maxId = Math.floor(max);
+  return Math.floor(Math.random() * (maxId - minId + 1)) + minId;
 }
 
 const getPhotoData = function(num) {
   let data = [];
 
-  for (var i = 1; i <= num; i++) {
+  for (let i = 1; i <= num; i++) {
     let photo = {
       _id: i,  
       propertyId: getRandomId(1, 100),
