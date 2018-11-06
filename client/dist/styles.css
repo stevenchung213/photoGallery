@@ -9,6 +9,7 @@ body {
 }
 
 button {
+    display: block;
     background-color: black;
     opacity: 0.65;
     color: white;
@@ -38,13 +39,12 @@ button:hover {
 }
 
 .prevArrow {
-    display: block;
     margin-left: 15px;
 }
 .expand {
-    display: block;
     position: absolute;
     margin-left: 6px;
+    margin-bottom: 5px;
     left: 0;
     bottom: 0;
     padding: 13px 13px;
@@ -148,8 +148,4 @@ button:hover {
     width: auto;
     margin: auto;
     opacity: 0.2;
-}
-
-.expanded .expand {
-    margin-bottom: 5px;
 }
